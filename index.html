@@ -1,0 +1,86 @@
+<!doctype html>
+
+<!-- 	Crypto charting demo using publish/subscribe platform 	-->
+<!-- 								-->
+<!-- 	(c)amokaya LLC 2018 / Paul Marshall 			-->
+<!-- 	based on http://bit.ly/2EJ4BAN				-->
+<!-- 	dedicated to Geoffrey Fox http://bit.ly/2EoJaHy		-->
+<!-- 	the guru of guidance					-->
+
+<html lang='en'>
+
+<head>
+	<meta charset='UTF-8'>
+	<!-- amokaya css -->
+	<link type='text/css' rel='stylesheet' href='amokaya_style.css'>
+	<!-- responsive css -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- PubNub JS -->
+	<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.18.0.min.js"></script>
+	<!-- eon css -->
+	<link type='text/css' rel='stylesheet' href='//pubnub.github.io/eon/v/eon/1.0.0/eon.css'>
+	<!-- eon JS -->
+	<script type='text/javascript' src='//pubnub.github.io/eon/v/eon/1.0.0/eon.js'></script>
+
+	<title>Crypto Dashboard</title>
+</head>
+
+<body>
+	<!--- open crypto tracking publishing channels --->
+	<script type='text/javascript' src='amokaya_pub_crypto.js'></script>
+	<!--- subscribe to these channels --->
+	<script type='text/javascript' src='amokaya_sub_crypto.js'></script>
+
+<div class="page">
+	<!--- grid layout -->
+	<div class="grid-container">
+ 	<div class="row rowbox">
+    		<div class="col-5">
+        	<h1>Fivebucklatte Crypto Dashboard</h1>
+        	<p>Here's $5. Go get me a latte</p>
+		</div>
+	</div>
+
+	 <div class="row rowbox">
+    		<div class="col-4">
+   		<p>Bitcoin</p>
+		<div id="bitcoinChart"></div>
+		<h3>iBitcoin</h3>
+    		</div>
+
+    		<div class="col-1">
+   		<p>Geoffrey Quotes</p>
+		<div id="combo-donut"></div>
+		<h3>Proprietary Algo</h3>
+    		</div>
+ 	 </div>
+
+ 	 <div class="row rowbox">
+    		<div class="col-2">
+    		<p>Operations</p>
+		<div id="operations"></div>
+		<h3>Operational risk</h3>
+    		</div>
+
+    		<div class="col-2">
+    		<p>liteCoin</p>
+		<div id="liteCoinChart"></div>
+		<h3>liteCoin</h3>
+    		</div>
+
+    		<div class="col-1">
+    		<p>Etherium</p>
+		<div id="etherChart"></div>
+		<h3>Etherium</h3>
+    		</div>
+ 	 </div>
+ 	 <div class="row rowbox">
+    		<div class="col-5">
+		<h3><a href="http://amokaya.com">&copy;2018 Paul Marshall / Amokaya LLC</a></h3>
+		</div>
+	 </div>
+	</div>
+	<!--- end grid layout -->
+</div>
+</body>
+</html>

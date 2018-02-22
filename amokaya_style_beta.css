@@ -1,0 +1,158 @@
+.grid-container{
+        width: 100%; 
+        max-width: 1200px;      
+	box-sizing: border-box;
+    }
+
+    /*-- clearfix hack -- */ 
+    .row:before, 
+    .row:after {
+        content:"";
+          display: table ;
+        clear:both;
+    }
+
+    [class*='col-'] {
+        float: left; 
+        min-height: 1px; 
+        width: 16.66%; 
+        /*-- gutter -- */
+        padding: 12px; 
+        background-color: #ffffff;
+    }
+
+    .col-1{ width: 14.66%; }
+    .col-2{ width: 31.33%; }
+    .col-3{ width: 48%;    }
+    .col-4{ width: 64.66%; }
+    .col-5{ width: 81.33%; }
+    .col-6{ width: 98%;   }
+
+    .outline, .outline *{
+        outline: 1px solid #f89406; 
+    }
+
+    /*-- some extra column content styling --*/
+    [class*='col-'] > p {
+     background-color: #ffffff; 
+     padding: 0;
+     margin: 0;
+     text-align: center; 
+     color: gray; 
+    }
+
+/*-- edit column widths for width-restricted mobile sites --*/
+@media all and (max-width:800px){
+        .col-1{ width: 33.33%;    }
+        .col-2{ width: 50%;        }
+        .col-3{ width: 83.33%;    }
+        .col-4{ width: 100%;    }
+        .col-5{ width: 100%;    }
+        .col-6{ width: 100%;      }
+
+        .row .col-2:last-of-type{
+            width: 100%; 
+        }
+
+        .row .col-5 ~ .col-1{
+            width: 100%; 
+        }
+    }
+
+/*-- For screens that are even smaller than 800px, make he columns except the very smallest 100%.*/
+ @media all and (max-width:650px){
+        .col-1{ width: 50%;        }
+        .col-2{ width: 100%;    }
+        .col-3{ width: 100%;    }
+        .col-4{ width: 100%;    }
+        .col-5{ width: 100%;    }
+        .col-6{ width: 100%;      }
+    }
+
+body {
+	font-family: 'Raleway', sans-serif;
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+	color: #444444;
+}
+
+h1 {
+	font-weight: 200;
+	color: #E87E04;
+	text-align: center;
+	font-size: 14;
+}
+
+h2 {
+	font-size: 13;
+	text-align: center;
+	color: #444444;
+}
+
+h3 {
+	font-size: 12px;
+	text-align: center;
+	color: #5C97BF;
+	font-weight: 200;
+	margin: 0;
+}
+
+img {
+	display: block;
+	margin: 0 auto;
+}
+
+p {
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.page {
+	background-color: #ffffff;
+	-webkit-box-shadow: 3px 7px 32px 13px rgba(188,186,194,1);
+	-moz-box-shadow: 3px 7px 32px 13px rgba(188,186,194,1);
+	box-shadow: 3px 7px 32px 13px rgba(188,186,194,1);
+}
+
+.rowbox {
+        padding: 12px; 
+	background-color: #ffffff;
+	color: #000000;
+	-webkit-box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.75);
+}
+
+.header a {
+	color: #f6f6f6;
+}
+
+.header p {
+	font-weight: 100;
+	font-size: 22px;
+	line-height: 32px;
+}
+
+.header span {
+	font-weight: 400;
+	font-style: italic;
+}
+
+.header-content {
+	padding-bottom: 10px;
+	margin-top: -1;
+}
+
+.icon-box {
+	border-right: 1px solid #eaeaea;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 20px;
+}
+
+.icon-box:last-child {
+	border: none;
+}
